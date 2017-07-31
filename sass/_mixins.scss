@@ -1,0 +1,138 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass mixins.
+// -----------------------------------------------------------------------------
+
+/// Event wrapper
+/// @author Harry Roberts
+/// @param {Bool} $self [false] - Whether or not to include current selector
+/// @link https://twitter.com/csswizardry/status/478938530342006784 Original tweet from Harry Roberts
+@mixin on-event($self: false) {
+  @if $self {
+    &,
+    &:hover,
+    &:active,
+    &:focus {
+      @content;
+    }
+  } @else {
+    &:hover,
+    &:active,
+    &:focus {
+      @content;
+    }
+  }
+}
+
+/// Make a context based selector a little more friendly
+/// @author Hugo Giraudel
+/// @param {String} $context
+@mixin when-inside($context) {
+  #{$context} & {
+    @content;
+  }
+}
+
+//font-size px to rem
+//usage: @include font-size(14px);
+@function calculateRem($size) {
+  $remSize: $size / 16px;
+  @return $remSize * 1rem;
+}
+
+@mixin font-size($size) {
+  font-size: $size;
+  font-size: calculateRem($size);
+}
+
+
+//centering horizontally, vertically or both
+//usage : @include center(both);
+@mixin center($position) {
+  position: absolute;
+  
+  @if $position == 'vertical' {
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+  @else if $position == 'horizontal' {
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translate(-50%);
+  }
+  @else if $position == 'both' {
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+}
+
+//Opacity with ie8+ fallback
+//usage: @include opacity(0.4);
+@mixin opacity($opacity) {
+  opacity: $opacity;
+  $opacity-ie: $opacity * 100;
+  filter: alpha(opacity = $opacity-ie); //IE8
+}
+
+//Circle
+//usage: @include circle(100px);
+@mixin circle($size) {
+     width: $size;
+     height: $size;
+     border-radius: 50%;
+}
+
+
+//Clearfix
+//usage: @include clearfix;
+@mixin clearfix {
+  *zoom: 1;
+  &:before, &:after {
+    content: " ";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+
+
+
+/*------------------------------------*\
+  #MEDIA QUERIES
+\*------------------------------------*/
+
+
+@mixin breakpoint($point) {
+  @if $point == xSmall {
+    @media (max-width: 600px) {
+      @content ; 
+    }
+  }
+  @else if $point == Small {
+    @media (max-width: 960px) {
+      @content ; 
+    }
+  }
+  @else if $point == Medium {
+    @media (min-width: 961px) and (max-width:1280px) {
+      @content ;
+    }
+  }
+  @else if $point == Large {
+    @media (max-width: 1920px) { 
+      @content ; 
+    }
+  }
+  @else if $point == xLarge {
+    @media (min-width: 1920px) { 
+      @content ; 
+    }
+  }
+}

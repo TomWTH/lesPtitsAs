@@ -1,0 +1,15 @@
+{
+	"cfg" : {
+		"sass" : "sass/",
+		"css" : "css",
+		"host" : "surge.sh",
+		"site" : "http://lesptitsas.surge.sh",
+		"browsers" : "last 2 versions"
+	},
+	"sass" : {
+		"options" : {
+			"outputStyle" : "nested",
+			"sourceMap": true
+		}
+	}
+}

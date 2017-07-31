@@ -1,0 +1,50 @@
+.group {
+
+  &:before {
+    content: '';
+    display: block;
+    height: 80px;
+  }
+}
+
+.subgroup {
+
+  .component-example {
+    border: 1px solid #ddd;
+    padding: 50px 20px 20px;
+    position: relative;
+
+    &:after {
+      color: #999;
+      content: 'Example';
+      font-weight: 600;
+      left: 20px;
+      position: absolute;
+      top: 10px;
+    }
+
+  }
+
+
+// code example part
+  .tobeprettify {
+    display: none;
+  }
+
+  .prettyprint {
+    border-color: #ddd;
+    border-radius: 0;
+    border-top: 0;
+
+  }
+}
+
+//spans for enphasis class names, paths...
+
+.class {
+  color: #080;
+}
+
+.path {
+  color: #606;
+}

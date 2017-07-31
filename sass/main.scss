@@ -1,0 +1,19 @@
+@charset 'UTF-8';
+
+// 1. Configuration and helpers (common to gl and example rendering)
+@import
+  'variables',
+  'functions',
+  'mixins';
+
+// 2. Vendors
+
+// 3. Base stuff (common to guidelines and example rendering)
+@import
+  'base',
+  'typography',
+  'helpers';
+
+// 4. Guidelines page rendering
+@import
+  'test';

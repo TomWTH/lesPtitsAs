@@ -1,0 +1,50 @@
+html,
+body {
+  color: #333;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+}
+
+h1,
+h3 {
+  color: $fb-blue;
+  font-weight: 300;
+}
+
+//style for h1 and elements you want to be as a h1
+h1 {
+  font-size: 2rem;
+  letter-spacing: -1px;
+
+  small {
+    font-size: 65%;
+  }
+}
+
+//style for h2 and elements you want to be as a h2
+h2 {
+  color: $fb-blue;
+  font-size: 1.5rem;
+
+  small {
+    font-size: 65%;
+  }
+}
+
+//style for h3 and elements you want to be as a h3
+h3 {
+  font-size: 1.25rem;
+
+  small {
+    font-size: 65%;
+  }
+}
+
+//style for h4 and elements you want to be as a h4
+h4 {
+  font-size: 1.125rem;
+
+  small {
+    font-size: 65%;
+  }
+}
