@@ -23,8 +23,6 @@ html {
  */
 a {
   text-decoration: none; }
-  a:hover, a:active, a:focus {
-    text-decoration: underline; }
 
 html,
 body {
@@ -103,5 +101,80 @@ h4 {
   background-color: #fff; }
   .plop.nope {
     display: none; }
+
+header {
+  background: transparent url("http://fakeimg.pl/1920x1080/") no-repeat center center;
+  background-attachment: fixed;
+  border: 1px solid #ccc;
+  display: flex;
+  flex-direction: column;
+  height: 98vh;
+  justify-content: space-around; }
+
+section {
+  min-height: 50vh; }
+
+nav {
+  display: flex; }
+  nav.nav-desktop {
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    margin-top: auto; }
+    nav.nav-desktop .nav--item {
+      background-color: #fff;
+      border: 1px solid #000;
+      padding: 5px 10px;
+      text-align: center;
+      width: 100px; }
+    nav.nav-desktop .nav--logo {
+      background-color: #0F4061;
+      border: 1px solid #red;
+      margin-right: auto;
+      height: 20px; }
+    nav.nav-desktop.sticky-nav {
+      position: fixed;
+      top: 0; }
+
+/*
+<a href="#" class="btn-look">
+  <span class="btn-look--content">Exemple</span>
+  <span class="btn-look--hover">Exemple</span>
+</a>
+*/
+.btn-look {
+  border: 3px solid #333;
+  color: #333;
+  display: inline-block;
+  font-weight: bold;
+  overflow: hidden;
+  position: relative; }
+  .btn-look span {
+    display: inline-block;
+    height: 100%;
+    padding: 10px 20px;
+    text-align: center;
+    width: 100%; }
+  .btn-look .btn-look--content {
+    background-color: transparent;
+    position: relative;
+    transform: translateY(0);
+    transition: transform .4s ease; }
+  .btn-look .btn-look--hover {
+    background-color: #333;
+    color: #fff;
+    left: 0;
+    position: absolute;
+    top: 0;
+    transform: translateY(100%);
+    transition: transform .4s ease; }
+  .btn-look:hover {
+    color: inherit;
+    text-decoration: none; }
+    .btn-look:hover .btn-look--content {
+      transform: translateY(-104%); }
+    .btn-look:hover .btn-look--hover {
+      transform: translateY(0); }
 
 /*# sourceMappingURL=main.css.map */
