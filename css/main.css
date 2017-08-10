@@ -21,39 +21,75 @@ html {
 /**
  * Basic styles for links
  */
-a {
+a,
+a:hover,
+a:focus {
   text-decoration: none; }
+
+.plop {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  z-index: 2506; }
+  .plop.nope {
+    display: none; }
+
+header {
+  background: transparent url("http://fakeimg.pl/1920x1080/") no-repeat center center;
+  background-attachment: fixed;
+  background-size: cover;
+  border: 1px solid #ccc;
+  display: flex;
+  flex-direction: column;
+  height: 98vh;
+  justify-content: flex-start; }
+  header h1 {
+    font-size: 8rem;
+    margin: auto 10%; }
+    header h1 span {
+      display: block; }
 
 html,
 body {
   color: #333;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 16px; }
 
 h1,
-h3 {
-  color: #212c4b;
-  font-weight: 300; }
+h2,
+h3,
+h4 {
+  color: #333;
+  font-family: 'Archivo Black', sans-serif;
+  letter-spacing: -2px;
+  text-transform: uppercase; }
 
 h1 {
   font-size: 2rem;
-  letter-spacing: -1px; }
+  letter-spacing: -3px; }
   h1 small {
     font-size: 65%; }
 
 h2 {
-  color: #212c4b;
-  font-size: 1.5rem; }
+  font-size: 3rem;
+  letter-spacing: -3px; }
   h2 small {
     font-size: 65%; }
 
 h3 {
-  font-size: 1.25rem; }
+  font-size: 2rem; }
   h3 small {
     font-size: 65%; }
 
 h4 {
-  font-size: 1.125rem; }
+  font-size: 1.25rem; }
   h4 small {
     font-size: 65%; }
 
@@ -92,24 +128,24 @@ h4 {
   position: absolute;
   width: 1px; }
 
-.plop {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #fff; }
-  .plop.nope {
-    display: none; }
+section {
+  text-align: center; }
 
-header {
-  background: transparent url("http://fakeimg.pl/1920x1080/") no-repeat center center;
-  background-attachment: fixed;
-  border: 1px solid #ccc;
+.quick-info h2,
+.quick-info h3 {
+  color: #26547c; }
+
+.quick-info .quick-info--content {
+  align-items: center;
   display: flex;
-  flex-direction: column;
-  height: 98vh;
-  justify-content: space-around; }
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 40px; }
+
+.quick-info .quick-info--item {
+  max-width: 20%;
+  font-size: 20px; }
 
 section {
   min-height: 50vh; }
@@ -118,24 +154,33 @@ nav {
   display: flex; }
   nav.nav-desktop {
     align-items: center;
+    border: 1px solid #ccc;
     flex-direction: row;
     flex-wrap: nowrap;
-    justify-content: space-between;
-    margin-top: auto; }
+    justify-content: flex-end;
+    width: 100%; }
     nav.nav-desktop .nav--item {
       background-color: #fff;
       border: 1px solid #000;
       padding: 5px 10px;
       text-align: center;
-      width: 100px; }
+      width: auto; }
     nav.nav-desktop .nav--logo {
-      background-color: #0F4061;
-      border: 1px solid #red;
-      margin-right: auto;
-      height: 20px; }
+      display: none; }
     nav.nav-desktop.sticky-nav {
       position: fixed;
+      right: 0;
       top: 0; }
+      nav.nav-desktop.sticky-nav .nav--logo {
+        background-color: #0F4061;
+        border: 1px solid red;
+        display: block;
+        height: 20px;
+        margin-right: auto; }
+        nav.nav-desktop.sticky-nav .nav--logo a {
+          display: block;
+          height: 100%;
+          width: 100%; }
 
 /*
 <a href="#" class="btn-look">

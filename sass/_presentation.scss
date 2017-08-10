@@ -1,0 +1,29 @@
+/////////////////////////
+//Quick info
+/////////////////////////
+
+section {
+  text-align: center;
+}
+
+.quick-info {
+
+  h2,
+  h3 {
+    color: $lpa-blue-s;
+  }
+
+  .quick-info--content {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 40px;
+  }
+
+  .quick-info--item {
+    max-width: 20%;
+    font-size: 20px;
+  }
+}

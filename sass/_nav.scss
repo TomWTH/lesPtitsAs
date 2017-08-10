@@ -3,29 +3,42 @@ nav {
 
   &.nav-desktop {
     align-items: center;
+    border: 1px solid #ccc;
     flex-direction: row;
     flex-wrap: nowrap;
-    justify-content: space-between;
-    margin-top: auto;
+    justify-content: flex-end;
+    width: 100%;
 
     .nav--item {
       background-color: #fff;
       border: 1px solid #000;
       padding: 5px 10px;
       text-align: center;
-      width: 100px;
+      width: auto;
     }
 
     .nav--logo {
-      background-color: #0F4061;
-      border: 1px solid #red;
-      margin-right: auto;
-      height: 20px;
+      display: none;
     }
 
     &.sticky-nav {
       position: fixed;
+      right: 0;
       top: 0;
+
+      .nav--logo {
+        background-color: #0F4061;
+        border: 1px solid red;
+        display: block;
+        height: 20px;
+        margin-right: auto;
+
+        a {
+          display: block;
+          height: 100%;
+          width: 100%;
+        }
+      }
     }
   }
 }

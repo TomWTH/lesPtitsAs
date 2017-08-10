@@ -24,7 +24,7 @@
 
       <script src="js/main.js"></script>
 
-      <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Roboto:100, 300, 400, 600, 700, 800|Archivo+Black" rel="stylesheet">
       <link rel="stylesheet" href="css/normalize.css">
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
       <link rel="stylesheet" href="css/font-awesome.min.css">
@@ -38,30 +38,59 @@
       <p>Loading</p>
     </div>
     <header class="header">
-      <h1>titre</h1>
+      <h1>
+        <span>titre</span>
+        <span>titre</span>
+      </h1>
       <nav class="nav-desktop">
-        <div class="nav--item nav--logo"></div>
-        <div class="nav--item">item 1</div>
-        <div class="nav--item">item 2</div>
-        <div class="nav--item">item 3</div>
-        <div class="nav--item">item 4</div>
-        <div class="nav--item">item 5</div>
-        <div class="nav--item">item 6</div>
-        <div class="nav--item">item 7</div>
-        <div class="nav--item">item 8</div>
+        <div class="nav--item nav--logo"><a href="#"></a></div>
+        <div class="nav--item item--selected"><a href="#">Présentation <i class="fa fa-chevron-down" aria-hidden="true"></i></a></div>
+        <div class="nav--item"><a href="creche.html">La vie à la crèche <i class="fa fa-chevron-down" aria-hidden="true"></i></a></div>
+        <div class="nav--item"><a href="association.html">L'asociation</a></div>
+        <div class="nav--item"><a href="#contact">Contact</a></div>
       </nav>
     </header>
-    <section>
-      <h2>item title</h2>
+    <section class="quick-info">
+      <h2>Quick infos</h2>
+      <p>small description like LPA c'est ceci, cela et c'est aussi (ou surtout)</p>
+      <div class="quick-info--content">
+        <div class="quick-info--item quick-info--item-1">
+          <img src="" alt="picto item 1">
+          <h3>quick tip</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum adipisci magni dolores sed eveniet totam, unde a est suscipit dicta perspiciatis, illum, error provident cupiditate illo fugiat modi velit blanditiis?</p>
+        </div>
+        <div class="quick-info--item quick-info--item-2">
+          <img src="" alt="picto item 1">
+          <h3>quick tip</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et cum iusto temporibus consequuntur quaerat ea quidem, velit optio! Vero minus maxime, officiis voluptatem omnis error hic itaque cum impedit. Distinctio.</p>
+        </div>
+        <div class="quick-info--item quick-info--item-3">
+          <img src="" alt="picto item 1">
+          <h3>quick tip</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi assumenda nesciunt expedita unde veniam numquam nostrum ipsum, quibusdam nulla optio asperiores amet qui nobis corporis, quod soluta magni quo quidem.
+          </p>
+        </div>
+      </div>
     </section>
-    <section>
-      <h2>item title</h2>
+    <section id="cp">
+      <h2>item title1</h2>
     </section>
-    <section>
-      <h2>item title</h2>
+    <section id="about">
+      <h2>L'association en quelques points</h2>
+      <div class="about--content"></div>
+      <p>Pour plus de détails, c'est par <a href="">ICI</a></p>
     </section>
-    <section>
-      <h2>item title</h2>
+    <section id="contact">
+      <h2>item title3</h2>
+      <div class="contact--content">
+        bg google map si apporte un interret avec cartouche adresse, tel, mail
+      </div>
     </section>
+    <footer>
+      <p>Les p'tits As - 2017</p>
+      <a href="">facebooklink</a>
+      <a href="">twitterlink</a>
+    </footer>
   </body>
 </html>

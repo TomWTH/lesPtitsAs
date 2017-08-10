@@ -1,20 +1,24 @@
 html,
 body {
   color: #333;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 16px;
 }
 
 h1,
-h3 {
-  color: $fb-blue;
-  font-weight: 300;
+h2,
+h3,
+h4 {
+  color: #333;
+  font-family: 'Archivo Black', sans-serif;
+  letter-spacing: -2px;
+  text-transform: uppercase;
 }
 
 //style for h1 and elements you want to be as a h1
 h1 {
   font-size: 2rem;
-  letter-spacing: -1px;
+  letter-spacing: -3px;
 
   small {
     font-size: 65%;
@@ -23,8 +27,8 @@ h1 {
 
 //style for h2 and elements you want to be as a h2
 h2 {
-  color: $fb-blue;
-  font-size: 1.5rem;
+  font-size: 3rem;
+  letter-spacing: -3px;
 
   small {
     font-size: 65%;
@@ -33,7 +37,7 @@ h2 {
 
 //style for h3 and elements you want to be as a h3
 h3 {
-  font-size: 1.25rem;
+  font-size: 2rem;
 
   small {
     font-size: 65%;
@@ -42,7 +46,7 @@ h3 {
 
 //style for h4 and elements you want to be as a h4
 h4 {
-  font-size: 1.125rem;
+  font-size: 1.25rem;
 
   small {
     font-size: 65%;
