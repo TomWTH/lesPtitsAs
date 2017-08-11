@@ -16,7 +16,6 @@ h4 {
   text-transform: uppercase;
 }
 
-//style for h1 and elements you want to be as a h1
 h1 {
   font-size: 2rem;
   letter-spacing: -3px;
@@ -26,7 +25,6 @@ h1 {
   }
 }
 
-//style for h2 and elements you want to be as a h2
 h2 {
   font-size: 3rem;
   letter-spacing: -3px;
@@ -36,7 +34,6 @@ h2 {
   }
 }
 
-//style for h3 and elements you want to be as a h3
 h3 {
   font-size: 2rem;
 
@@ -45,11 +42,14 @@ h3 {
   }
 }
 
-//style for h4 and elements you want to be as a h4
 h4 {
   font-size: 1.25rem;
 
   small {
     font-size: 65%;
   }
+}
+
+.bold {
+  font-weight: 600;
 }

@@ -3,7 +3,7 @@
 /////////////////////////
 
 section {
-  border: 1px solid transparent;
+  padding-top: 20px;
   text-align: center;
 }
 
@@ -15,7 +15,7 @@ section {
   }
 
   .quick-info--content {
-    align-items: center;
+    align-items: flex-start;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -30,7 +30,60 @@ section {
 }
 
 .cp {
-  background-color: #999;
+  position: relative;
+
+  & + .intersection {
+    margin-top: -60px;
+  }
+
+  &:before {
+    background-color: #666;
+    content: '';
+    height: 95%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+  }
+
+  .cp--content {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    position: relative;
+    z-index: 2;
+  }
+
+  .bloc-cp {
+    background-color: #fff;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
+    max-width: 600px;
+    padding: 60px;
+    text-align: left;
+
+    h3,
+    h4 {
+      text-align: center;
+    }
+
+    h3 {
+      color: $lpa-green-s;
+    }
+
+    &.bloc-cp-1 {
+      margin: -100px 0 0 -40%;
+    }
+    &.bloc-cp-2 {
+      box-shadow: -10px -10px 20px rgba(0, 0, 0, 0.2);
+      margin: -50px 0 0 40%;
+    }
+    &.bloc-cp-3 {
+      margin: -50px 0 0 -40%;
+    }
+  }
 }
 
 .about {
@@ -56,7 +109,16 @@ section {
   }
 }
 
+.contact {
+  h2 {
+    color: $lpa-yellow-s;
+  }
+}
+
 .intersection {
+  overflow: hidden;
+  width: 100%;
+
   &.solo {
     background: transparent url('http://fakeimg.pl/1920x1080/') no-repeat center center;
     background-attachment: fixed;
