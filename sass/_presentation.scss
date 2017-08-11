@@ -5,6 +5,21 @@
 section {
   padding-top: 20px;
   text-align: center;
+
+  a {
+    color: $lpa-blue-s;
+    cursor: pointer;
+    text-decoration: underline;
+
+    &:hover {
+      color: $lpa-blue;
+    }
+  }
+
+  .chapeau {
+    margin-bottom: 20px;
+  }
+
 }
 
 .quick-info {

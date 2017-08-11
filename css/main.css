@@ -134,6 +134,14 @@ h4 {
 section {
   padding-top: 20px;
   text-align: center; }
+  section a {
+    color: #26547c;
+    cursor: pointer;
+    text-decoration: underline; }
+    section a:hover {
+      color: #1a535c; }
+  section .chapeau {
+    margin-bottom: 20px; }
 
 .quick-info h2,
 .quick-info h3 {
@@ -259,7 +267,8 @@ nav {
     nav.nav-desktop.sticky-nav {
       position: fixed;
       right: 0;
-      top: 0; }
+      top: 0;
+      z-index: 10; }
       nav.nav-desktop.sticky-nav .nav--logo {
         display: block;
         height: 20px;
